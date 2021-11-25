@@ -1,16 +1,14 @@
 import { PostUpdate } from "../models/PostUpdate";
-import * as AWS from "aws-sdk";
-const AWSXRay = require("aws-xray-sdk");
 import { DocumentClient } from "aws-sdk/clients/dynamodb";
 import { PostItem } from "../models/PostItem";
 import { createLogger } from "../utils/logger";
 
-const XAWS = AWSXRay.captureAWS(AWS);
+const AWSXRay = require("aws-xray-sdk-core");
+const AWS = AWSXRay.captureAWS(require("aws-sdk"));
 
 const logger = createLogger("PostAccess");
 
 //  dataLayer logic
-
 export class PostAccess {
   constructor(
     private readonly docClient: DocumentClient = createDynamoDBClient(),
@@ -101,5 +99,5 @@ export class PostAccess {
 }
 
 function createDynamoDBClient() {
-  return new XAWS.DynamoDB.DocumentClient();
+  return new AWS.DynamoDB.DocumentClient();
 }
