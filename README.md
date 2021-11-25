@@ -5,7 +5,11 @@ A simple blog application backend built with serverless on AWS
 ## Technologies Used
 
 **Languages**: Typescript, NodeJs
+<br/>
+
 **Framework**: Serverless Framework, Auth0/OAuth
+<br/>
+
 **AWS services**: AWS Lambda, APIGateWay, CloudFormation, S3, CloudWatch, DynamoDB, AWS X-ray,
 
 ## Features
