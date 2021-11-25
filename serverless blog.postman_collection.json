@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "e7142f66-9399-4d82-a5de-dc7f9aa61e9b",
+		"name": "serverless blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all Posts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{authToken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ymko4gph3g.execute-api.us-east-1.amazonaws.com/dev/posts",
+					"protocol": "https",
+					"host": [
+						"ymko4gph3g",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Posts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{authToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"new post 1\",\r\n    \"body\":\"new post body\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ymko4gph3g.execute-api.us-east-1.amazonaws.com/dev/posts",
+					"protocol": "https",
+					"host": [
+						"ymko4gph3g",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete post",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{authToken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ymko4gph3g.execute-api.us-east-1.amazonaws.com/dev/posts/f172f55f-6d81-4f48-ae8b-592e3d22d90f",
+					"protocol": "https",
+					"host": [
+						"ymko4gph3g",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"posts",
+						"f172f55f-6d81-4f48-ae8b-592e3d22d90f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Post",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{authToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
+				"url": {
+					"raw": "https://ymko4gph3g.execute-api.us-east-1.amazonaws.com/dev/posts/688e4def-db2f-4b8e-ad96-a335ade84c3a",
+					"protocol": "https",
+					"host": [
+						"ymko4gph3g",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"posts",
+						"688e4def-db2f-4b8e-ad96-a335ade84c3a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update post",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{authToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"new post 1 +++\",\r\n    \"body\":\"new post body\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ymko4gph3g.execute-api.us-east-1.amazonaws.com/dev/posts/688e4def-db2f-4b8e-ad96-a335ade84c3a",
+					"protocol": "https",
+					"host": [
+						"ymko4gph3g",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"posts",
+						"688e4def-db2f-4b8e-ad96-a335ade84c3a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Invalid Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{authToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"new post 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ymko4gph3g.execute-api.us-east-1.amazonaws.com/dev/posts",
+					"protocol": "https",
+					"host": [
+						"ymko4gph3g",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "authToken",
+			"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjVXbFpXX3lSc0czUFBzUi1reTZYViJ9.eyJpc3MiOiJodHRwczovL2Rldi1nOHg4ZTFlZy51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTE4NDc1NDUzNjg3MzAzNzEzNDMiLCJhdWQiOiJIeFp6ZUlQRUFWVGRSQXlTenhEbkVSWXNxeFhOR3JEOCIsImlhdCI6MTYzNzU3NTQ5OSwiZXhwIjoxNjM3NjExNDk5LCJhdF9oYXNoIjoiNUV0Y09Udm9iNWJZZmR3NTNxbXlqUSIsIm5vbmNlIjoiSkwxX0NEUktxU1owTFNFeDhlTC1UWkpyU1MzanJmRG0ifQ.ZHE2p8-lje80FG8IFS6OGkZSGLARFK3Iel2zZb0_xtl64O5IKi3rixiRoIGQijuFCln2G693L7Ch6GAwCqThEYEawkLAHYBXlVpRSIOa6_2SYlqzWZXlnP3Ovlf8wYZj0q_YQX7CcB2WA9KSU1B6joVTBl2R6KqCfYYAbORAtyqvZh66ADxmcKMDdTQ8rKM9mQHXzi5_EhKIOb1V7HqWEmk0Z-oMf_6_YUHcKB0B53_IdbwNl5ehd-zC-vR-jzIjVyAYnrZEqRBm9McmaQqrfAjGloefWhJSorJNPB_4OmKPmbfYO8J9fic0pmN5o0f4tl8wPAFkR-I5TBzKCAIbug"
+		}
+	]
+}
