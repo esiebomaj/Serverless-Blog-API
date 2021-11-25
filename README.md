@@ -17,8 +17,8 @@ A simple blog application backend built with serverless on AWS
 
 ## Endpoints
 
-- Get all post: GET - https://ymko4gph3g.execute-api.us-east-1.amazonaws.com/dev/posts
-- Create New post: POST - https://ymko4gph3g.execute-api.us-east-1.amazonaws.com/dev/posts
-- Get single Post: GET - https://ymko4gph3g.execute-api.us-east-1.amazonaws.com/dev/posts/{postId}
-- Update Post: PATCH - https://ymko4gph3g.execute-api.us-east-1.amazonaws.com/dev/posts/{postId}
-- Delete Post: DELETE - https://ymko4gph3g.execute-api.us-east-1.amazonaws.com/dev/posts/{postId}
+- Get all post - GET - https://ymko4gph3g.execute-api.us-east-1.amazonaws.com/dev/posts
+- Create New post - POST - https://ymko4gph3g.execute-api.us-east-1.amazonaws.com/dev/posts
+- Get single Post - GET - https://ymko4gph3g.execute-api.us-east-1.amazonaws.com/dev/posts/{postId}
+- Update Post - PATCH - https://ymko4gph3g.execute-api.us-east-1.amazonaws.com/dev/posts/{postId}
+- Delete Post - DELETE - https://ymko4gph3g.execute-api.us-east-1.amazonaws.com/dev/posts/{postId}
