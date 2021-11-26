@@ -33,4 +33,4 @@ A simple blog application backend built with serverless on AWS
 
 - cd frontend
 - install dependencies `yarn install` or `npm install`
-- `yarn start` or `npm start`
+- start development server `yarn start` or `npm start`
