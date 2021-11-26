@@ -26,3 +26,11 @@ A simple blog application backend built with serverless on AWS
 - Get single Post - GET - https://ymko4gph3g.execute-api.us-east-1.amazonaws.com/dev/posts/{postId}
 - Update Post - PATCH - https://ymko4gph3g.execute-api.us-east-1.amazonaws.com/dev/posts/{postId}
 - Delete Post - DELETE - https://ymko4gph3g.execute-api.us-east-1.amazonaws.com/dev/posts/{postId}
+
+## Development Setup
+
+### Frontend
+
+- cd frontend
+- install dependencies `yarn install` or `npm install`
+- `yarn start` or `npm start`
