@@ -4,10 +4,10 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
 
 const UpdatePost = ({ isAuthenticated, user, posts, triggerReload }) => {
   const [post, setPost] = useState({ title: "", body: "" });
+  const [loading, setLoading] = useState(false);
 
   const params = useParams();
   const postId = params.postId;
-  console.log(postId);
 
   const getSinglePost = async () => {
     const post = posts.find((post) => post.postId === postId);
@@ -30,8 +30,9 @@ const UpdatePost = ({ isAuthenticated, user, posts, triggerReload }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(post);
+    setLoading(true);
     await endPoints.updatePost({ title: post.title, body: post.body }, postId);
+    setLoading(false);
     triggerReload();
     navigate("/");
   };
@@ -63,7 +64,7 @@ const UpdatePost = ({ isAuthenticated, user, posts, triggerReload }) => {
           style={{ height: "30px", cursor: "pointer" }}
           onClick={handleSubmit}
         >
-          Update
+          {loading ? "Loading ..." : "Update"}
         </button>
       </form>
     </div>

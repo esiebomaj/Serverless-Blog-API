@@ -60,7 +60,7 @@ function App() {
               }}
             >
               <Link style={{ textDecoration: "none" }} to="/">
-                > Home
+                {">"} Home
               </Link>
               <div style={{ display: "flex" }}>
                 {isAuthenticated ? (

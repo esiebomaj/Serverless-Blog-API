@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import * as endPoints from "../apiService";
 import { Link } from "react-router-dom";
 
 const Home = ({ isAuthenticated, user, posts, triggerReload }) => {
   const handleDelete = async (postId) => {
-    const response = await endPoints.deletePost(postId);
+    await endPoints.deletePost(postId);
     triggerReload();
   };
 
